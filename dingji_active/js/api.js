@@ -33,7 +33,7 @@ function get_tel() {
 	let data = ajaxPost(activity_get_tel, ajaxdata);
 	if (data.status == "200") {
 		$(".open-popo").css("display", "flex");
-		$(".phone").html(data.data.name+"		"+data.data.tel)
+		$(".phone").html(data.data.name + "		" + data.data.tel)
 	}
 }
 // 分享成功之后调一下
@@ -247,9 +247,7 @@ function prestore_h5() {
 	}
 	let data = ajaxPost(activity_prestore_h5, ajaxdata);
 	if (data.status == "200") {
-		console.log(data.data);
-		console.log("https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb?" + data.data.package+"&package"+data.data.timestamp)
-		location.href = "https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb?" + data.data.package+"&package="+data.data.timestamp;
+location.href = "https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb?" + data.data.package + "&package=" + data.data.timestamp;
 
 	} else {
 		layer.open({
@@ -275,7 +273,7 @@ function luck() {
 	let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 	let ajaxdata = {
 		tel: userInfo.tel,
-		school_id:school_id
+		school_id: school_id
 	}
 	let data = ajaxPost(activity_luck, ajaxdata);
 	if (data.status == "200") {
