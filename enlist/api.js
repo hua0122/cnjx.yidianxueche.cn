@@ -322,7 +322,7 @@ function submit_sign() {
 	let data = ajaxPost(sign_submit_sign, ajaxdata);
 
 	if (data.status == "200") {
-		
+
 		var type = "";
 		var dataUrl = "";
 		wx.ready(function() {
